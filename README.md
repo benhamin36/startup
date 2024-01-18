@@ -8,6 +8,16 @@ It's fun to play games with friends. The competitive nature of them makes them a
 
 ![Screenshot of the mockup for the site](rpgsitemockup.png)
 
+## Key features
+
+- Secure login over HTTPS
+- Ability to choose and equip new armor and weapons
+- Display of friends
+- Ability to challenge friends to battles
+- Toggle between friends to battle
+- Choose moves and follow the events in a battle
+- Win experience and new weapons
+
 ## Technologies
 
 I am going to use the required technologies in the following ways:
