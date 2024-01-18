@@ -9,7 +9,7 @@ It's fun to play games with friends. The competitive nature of them makes them a
 
 ## Layout
 
-![Screenshot of the mockup for the site](rpg site mockup.png)
+[Screenshot of the mockup for the site](rpg site mockup.png)
 
 ## Technologies
 
