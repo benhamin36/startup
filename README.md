@@ -1,6 +1,3 @@
-# startup
-260 Class Repo
-
 # Specification
 
 ## Elevator Pitch
