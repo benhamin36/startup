@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG Battler HTML</title>
+  </head>
+  <body>
+    <!-- Use header, main, and footer elements to give semantic structure -->
+    <header>
+      <h1>RPG Battler</h1>
+
+      <!-- Navigation elements -->
+      <nav>
+        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
+        <menu>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="battle.html">Battle</a></li>
+          <li><a href="friends.html">Friends</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="database.html">Database</a></li>
+        </menu>
+      </nav>
+
+      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
+      <hr />
+    </header>
+
+    <main>
+      <h3>Player Table</h3>
+      <table>
+        <thead>
+            <th>Name (Primary Key)</th>
+            <th>Equipped Armor (Foreign Key)</th>
+            <th>Equipped Bow (Foreign Key)</th>
+            <th>Equipped Sword (Foreign Key)</th>
+            <th>Equipped Spear (Foreign Key)</th>
+            <th>Experience</th>
+            <th>Level</th>
+        </thead>
+        <tr>
+            <td>TheChosn1</td>
+            <td>ultimate-mail</td>
+            <td>elf-longbow</td>
+            <td>knights-broadsword</td>
+            <td>jousters-lance</td>
+            <td>999</td>
+            <td>99</td>
+        </tr>
+        <tr>
+            <td>Mr Knight</td>
+            <td>knignts-plate</td>
+            <td>hungers-recurve</td>
+            <td>knights-broadsword</td>
+            <td>steel-pike</td>
+            <td>800</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Mrs Knight</td>
+            <td>mage-robes</td>
+            <td>missile-staff</td>
+            <td>enchanted-dagger</td>
+            <td>flame-barb</td>
+            <td>900</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>NoLifr96</td>
+            <td>ultimate-mail</td>
+            <td>elf-longbow</td>
+            <td>curved-sabre</td>
+            <td>steel-pike</td>
+            <td>999</td>
+            <td>99</td>
+        </tr>
+      </table>
+
+      <h3>Armor Table</h3>
+      <table>
+        <thead>
+            <th>Name (Primary Key)</th>
+            <th>Defense</th>
+        </thead>
+        <tr>
+            <td>ultimate-mail</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>knights-plate</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>mage-robes</td>
+            <td>100</td>
+        </tr>
+      </table>
+
+      <h3>Bow Table</h3>
+      <table>
+        <thead>
+            <th>Name (Primary Key)</th>
+            <th>Power</th>
+        </thead>
+        <tr>
+            <td>elf-longbow</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>hunters-recurve</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>elf-longbow</td>
+            <td>50</td>
+        </tr>
+      </table>
+
+      <h3>Sword Table</h3>
+      <table>
+        <thead>
+            <th>Name (Primary Key)</th>
+            <th>Power</th>
+        </thead>
+        <tr>
+            <td>knights-broadsword</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>curved-sabre</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>enchanted-dagger</td>
+            <td>100</td>
+        </tr>
+      </table>
+
+      <h3>Spear Table</h3>
+      <table>
+        <thead>
+            <th>Name (Primary Key)</th>
+            <th>Power</th>
+        </thead>
+        <tr>
+            <td>jousters-lance</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>steel-pike</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>flame-barb</td>
+            <td>100</td>
+        </tr>
+      </table>
+
+      <h3>Armor Inventory Table</h3>
+      <table>
+        <thead>
+            <th>ID (Primary Key)</th>
+            <th>Player Name (Foreign Key)</th>
+            <th>Armor Name (Foreign Key)</th>
+        </thead>
+        <tr>
+            <td>1</td>
+            <td>TheChosn1</td>
+            <td>ultimate-mail</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>TheChosn1</td>
+            <td>knights-plate</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>TheChosn1</td>
+            <td>mage-robes</td>
+        </tr>
+        <tr>
+            <td>...</td>
+        </tr>
+      </table>
+
+      <h3>Bow Inventory Table</h3>
+      <table>
+        <thead>
+            <th>ID (Primary Key)</th>
+            <th>Player Name (Foreign Key)</th>
+            <th>Bow Name (Foreign Key)</th>
+        </thead>
+        <tr>
+            <td>1</td>
+            <td>TheChosn1</td>
+            <td>elf-longbow</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>TheChosn1</td>
+            <td>hunters-recurve</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>TheChosn1</td>
+            <td>missile-staff</td>
+        </tr>
+        <tr>
+            <td>...</td>
+        </tr>
+      </table>
+
+      <h3>Sword Inventory Table</h3>
+      <table>
+        <thead>
+            <th>ID (Primary Key)</th>
+            <th>Player Name (Foreign Key)</th>
+            <th>Sword Name (Foreign Key)</th>
+        </thead>
+        <tr>
+            <td>1</td>
+            <td>TheChosn1</td>
+            <td>knights-broadsword</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>TheChosn1</td>
+            <td>curved-sabre</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>TheChosn1</td>
+            <td>enchanted-dagger</td>
+        </tr>
+        <tr>
+            <td>...</td>
+        </tr>
+      </table>
+
+      <h3>Spear Inventory Table</h3>
+      <table>
+        <thead>
+            <th>ID (Primary Key)</th>
+            <th>Player Name (Foreign Key)</th>
+            <th>Spear Name (Foreign Key)</th>
+        </thead>
+        <tr>
+            <td>1</td>
+            <td>TheChosn1</td>
+            <td>jousters-lance</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>TheChosn1</td>
+            <td>steel-pike</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>TheChosn1</td>
+            <td>flame-barb</td>
+        </tr>
+        <tr>
+            <td>...</td>
+        </tr>
+      </table>
+
+      <h3>Friends Table</h3>
+      <table>
+        <thead>
+            <th>ID (Primary Key)</th>
+            <th>Friend 1 (Foreign Key)</th>
+            <th>Friend 2 (Foreign Key)</th>
+        </thead>
+        <tr>
+            <td>1</td>
+            <td>TheChosn1</td>
+            <td>Mr Knight</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>TheChosn1</td>
+            <td>Mrs Knight</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>TheChosn1</td>
+            <td>NoLifr96</td>
+        </tr>
+        <tr>
+            <td>...</td>
+        </tr>
+      </table>
+
+      <h3>Login Info Table</h3>
+      <table>
+        <thead>
+            <th>ID (Primary Key)</th>
+            <th>Name (Foreign Key)</th>
+            <th>Password</th>
+        </thead>
+        <tr>
+            <td>1</td>
+            <td>TheChosn1</td>
+            <td>ProfecizRawSm3</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mr Knight</td>
+            <td>Chivalry2!</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Mrs Knight</td>
+            <td>uNiCrNL0vR</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>NoLifr96</td>
+            <td>ac@LxY;i01!!</td>
+        </tr>
+      </table>
+    </main>
+
+    <footer>
+      <hr />
+      <span class="text-reset">Benjamin Wickham</span>
+      <br />
+      <a href="https://github.com/benhamin36/startup.git">GitHub</a>
+    </footer>
+  </body>
+</html>
