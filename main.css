@@ -9,6 +9,10 @@ header {
   background-color: #247;
 }
 
+.nav-item:hover {
+  color: #CC5
+}
+
 #login-section {
   flex: 1 calc(100vh - 110px);
   display: flex;
