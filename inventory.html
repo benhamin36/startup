@@ -6,23 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RPG Battler HTML</title>
     <link rel="icon" href="RPG site Guy.png" />
+
+     
+    <link rel="stylesheet" href="main.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
-    <header>
+    <header class="text-light">
       <h1>RPG Battler</h1>
 
       <!-- Navigation elements -->
       <nav>
         <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="battle.html">Battle</a></li>
-          <li><a href="friends.html">Friends</a></li>
-          <li><a href="inventory.html">Inventory</a></li>
-          <li><a href="database.html">Database</a></li>
-          <li><a href="websocket.html">Websocket</a></li>
-        </menu>
+          <menu class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="battle.html">Battle</a></li>
+            <li class="nav-item"><a class="nav-link" href="friends.html">Friends</a></li>
+            <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
+            <li class="nav-item"><a class="nav-link" href="database.html">Database</a></li>
+            <li class="nav-item"><a class="nav-link" href="websocket.html">Websocket</a></li>
+          </menu>
       </nav>
 
       <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
@@ -30,38 +41,38 @@
     </header>
 
     <main>
-      <h1>Inventory</h1>
-      <h2>TheChosn1</h2>
+      <h1 class="m-2 p-2 border-bottom">Inventory</h1>
+      <h2 class="m-2 p-2 text-muted">TheChosn1</h2>
 
-      <table>
+      <table class="table border-top">
         <tr>
           <td>
-            <label for="armor-list">Armor:</label> 
-            <select name="armors" id="armors"> 
+            <label class="p-2" for="armor-list">Armor:</label> 
+            <select class="form-select" name="armors" id="armors"> 
               <option value="ultimate-mail">Ultimate Mail</option> 
               <option value="knignts-plate">Knight's Plate</option> 
               <option value="mage-robes">Mage Robes</option>
             </select>
           </td>
           <td>
-            <label for="bow-list">Bow:</label> 
-            <select name="bows" id="bows"> 
+            <label class="p-2" for="bow-list">Bow:</label> 
+            <select class="form-select" name="bows" id="bows"> 
               <option value="elf-longbow">Elf Longbow</option> 
               <option value="hunters-recurve">Hunter's Recurve</option> 
               <option value="missile-staff">Missile Staff</option>
             </select>
           </td>
           <td>
-            <label for="sword-list">Sword:</label> 
-            <select name="swords" id="swords"> 
+            <label class="p-2" for="sword-list">Sword:</label> 
+            <select class="form-select" name="swords" id="swords"> 
               <option value="knights-broadsword">Knight's Broadsword</option> 
               <option value="curved-sabre">Curved Sabre</option> 
               <option value="enchanted-dagger">Enchanted Dagger</option>
             </select>
           </td>
           <td>
-            <label for="spear-list">Spear:</label> 
-            <select name="spears" id="spears"> 
+            <label class="p-2" for="spear-list">Spear:</label> 
+            <select class="form-select" name="spears" id="spears"> 
               <option value="jousters-lance">Jouster's Lance</option> 
               <option value="steel-pike">Steel Pike</option> 
               <option value="flame-barb">Flame Barb</option>
@@ -70,15 +81,15 @@
         </tr>
       </table>
 
-      <img src="RPG site Guy.png" width="600">
+      <img class="container-fluid bg-light text-center" src="RPG site Guy.png" width="600">
 
     </main>
 
-    <footer>
-      <hr />
-      <span class="text-reset">Benjamin Wickham</span>
-      <br />
-      <a href="https://github.com/benhamin36/startup.git">GitHub</a>
+    <footer class="bg-dark text-white-50">
+      <div class="container-fluid">
+        <span class="text-reset">Benjamin Wickham</span>
+        <a class="text-reset" href="https://github.com/benhamin36/startup.git">GitHub</a>
+      </div>
     </footer>
   </body>
 </html>

@@ -6,23 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RPG Battler HTML</title>
     <link rel="icon" href="RPG site Guy.png" />
+
+     
+    <link rel="stylesheet" href="main.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
-    <header>
+    <header class="text-light">
       <h1>RPG Battler</h1>
 
       <!-- Navigation elements -->
       <nav>
         <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="battle.html">Battle</a></li>
-          <li><a href="friends.html">Friends</a></li>
-          <li><a href="inventory.html">Inventory</a></li>
-          <li><a href="database.html">Database</a></li>
-          <li><a href="websocket.html">Websocket</a></li>
-        </menu>
+            <menu class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="battle.html">Battle</a></li>
+                <li class="nav-item"><a class="nav-link" href="friends.html">Friends</a></li>
+                <li class="nav-item"><a class="nav-link" href="inventory.html">Inventory</a></li>
+                <li class="nav-item"><a class="nav-link" href="database.html">Database</a></li>
+                <li class="nav-item"><a class="nav-link" href="websocket.html">Websocket</a></li>
+              </menu>
       </nav>
 
       <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
@@ -30,8 +41,8 @@
     </header>
 
     <main>
-      <h3>Player Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Player Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>Name (Primary Key)</th>
             <th>Equipped Armor (Foreign Key)</th>
@@ -79,8 +90,8 @@
         </tr>
       </table>
 
-      <h3>Armor Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Armor Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>Name (Primary Key)</th>
             <th>Defense</th>
@@ -99,8 +110,8 @@
         </tr>
       </table>
 
-      <h3>Bow Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Bow Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>Name (Primary Key)</th>
             <th>Power</th>
@@ -119,8 +130,8 @@
         </tr>
       </table>
 
-      <h3>Sword Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Sword Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>Name (Primary Key)</th>
             <th>Power</th>
@@ -139,8 +150,8 @@
         </tr>
       </table>
 
-      <h3>Spear Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Spear Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>Name (Primary Key)</th>
             <th>Power</th>
@@ -159,8 +170,8 @@
         </tr>
       </table>
 
-      <h3>Armor Inventory Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Armor Inventory Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>ID (Primary Key)</th>
             <th>Player Name (Foreign Key)</th>
@@ -186,8 +197,8 @@
         </tr>
       </table>
 
-      <h3>Bow Inventory Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Bow Inventory Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>ID (Primary Key)</th>
             <th>Player Name (Foreign Key)</th>
@@ -213,8 +224,8 @@
         </tr>
       </table>
 
-      <h3>Sword Inventory Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Sword Inventory Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>ID (Primary Key)</th>
             <th>Player Name (Foreign Key)</th>
@@ -240,8 +251,8 @@
         </tr>
       </table>
 
-      <h3>Spear Inventory Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Spear Inventory Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>ID (Primary Key)</th>
             <th>Player Name (Foreign Key)</th>
@@ -267,8 +278,8 @@
         </tr>
       </table>
 
-      <h3>Friends Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Friends Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>ID (Primary Key)</th>
             <th>Friend 1 (Foreign Key)</th>
@@ -294,8 +305,8 @@
         </tr>
       </table>
 
-      <h3>Login Info Table</h3>
-      <table>
+      <h3 class="m-2 p-2 text-muted">Login Info Table</h3>
+      <table class="table m-2 p-2">
         <thead>
             <th>ID (Primary Key)</th>
             <th>Name (Foreign Key)</th>
@@ -324,11 +335,11 @@
       </table>
     </main>
 
-    <footer>
-      <hr />
-      <span class="text-reset">Benjamin Wickham</span>
-      <br />
-      <a href="https://github.com/benhamin36/startup.git">GitHub</a>
-    </footer>
+    <footer class="bg-dark text-white-50">
+        <div class="container-fluid">
+          <span class="text-reset">Benjamin Wickham</span>
+          <a class="text-reset" href="https://github.com/benhamin36/startup.git">GitHub</a>
+        </div>
+      </footer>
   </body>
 </html>
