@@ -18,7 +18,7 @@
     />
 
   </head>
-  <body>
+  <body onload="setEquipped()">
     <!-- Use header, main, and footer elements to give semantic structure -->
     <header class="text-light p-2">
       <h1>RPG Battler</h1>
@@ -48,7 +48,7 @@
         <tr>
           <td>
             <label class="p-2" for="armor-list">Armor:</label> 
-            <select class="form-select" name="armors" id="armors"> 
+            <select class="form-select" name="armors" id="armors" onchange="equipArmor()"> 
               <option value="ultimate-mail">Ultimate Mail</option> 
               <option value="knignts-plate">Knight's Plate</option> 
               <option value="mage-robes">Mage Robes</option>
@@ -56,7 +56,7 @@
           </td>
           <td>
             <label class="p-2" for="bow-list">Bow:</label> 
-            <select class="form-select" name="bows" id="bows"> 
+            <select class="form-select" name="bows" id="bows"  onchange="equipBow()"> 
               <option value="elf-longbow">Elf Longbow</option> 
               <option value="hunters-recurve">Hunter's Recurve</option> 
               <option value="missile-staff">Missile Staff</option>
@@ -64,7 +64,7 @@
           </td>
           <td>
             <label class="p-2" for="sword-list">Sword:</label> 
-            <select class="form-select" name="swords" id="swords"> 
+            <select class="form-select" name="swords" id="swords"  onchange="equipSword()"> 
               <option value="knights-broadsword">Knight's Broadsword</option> 
               <option value="curved-sabre">Curved Sabre</option> 
               <option value="enchanted-dagger">Enchanted Dagger</option>
@@ -72,7 +72,7 @@
           </td>
           <td>
             <label class="p-2" for="spear-list">Spear:</label> 
-            <select class="form-select" name="spears" id="spears"> 
+            <select class="form-select" name="spears" id="spears"  onchange="equipSpear()"> 
               <option value="jousters-lance">Jouster's Lance</option> 
               <option value="steel-pike">Steel Pike</option> 
               <option value="flame-barb">Flame Barb</option>
@@ -92,4 +92,6 @@
       </div>
     </footer>
   </body>
+
+  <script src="inventory.js"></script>
 </html>
