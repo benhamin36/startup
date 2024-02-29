@@ -18,7 +18,7 @@
     />
 
   </head>
-  <body>
+  <body onload="onload()">
     <!-- Use header, main, and footer elements to give semantic structure -->
     <header class="text-light p-2">
       <h1>RPG Battler</h1>
@@ -43,11 +43,11 @@
     <main>
       <h1 class="m-2 p-2">Battle</h1>
       <div class="bg-light border border-secondary rounded p-2 m-2">
-        <h2 class="text-danger">Mr. Knight</h2>
-        <h3 class="text-secondary">HP: 44/56</h3>
+        <h2 class="text-danger" id="opponentName">Mr. Knight</h2>
+        <h3 class="text-secondary" id="opponentHP">HP: 44/56</h3>
       </div>
 
-      <ul>
+      <ul id="battleLog">
         <li>Mr Knight uses Bow!</li>
         <li>You use Sword!</li>
         <li class="text-success">You have advantage!</li>
@@ -57,7 +57,7 @@
 
       <div class="bg-light border border-secondary rounded p-2 m-2">
         <h2 class="text-success">You</h2>
-        <h3 class="text-secondary">HP: 50/56</h3>
+        <h3 class="text-secondary" id="yourHP">HP: 50/56</h3>
         
         <div class="rounded bg-secondary p-2 m-2">
           <span class="text-light">Choose your next attack!</span>
@@ -92,4 +92,5 @@
       </div>
     </footer>
   </body>
+  <script src="battle.js"></script>
 </html>
