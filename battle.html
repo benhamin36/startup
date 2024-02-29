@@ -47,13 +47,7 @@
         <h3 class="text-secondary" id="opponentHP">HP: 44/56</h3>
       </div>
 
-      <ul id="battleLog">
-        <li>Mr Knight uses Bow!</li>
-        <li>You use Sword!</li>
-        <li class="text-success">You have advantage!</li>
-        <li class="text-success">Mr Knight takes 12 damage!</li>
-        <li class="text-danger">You take 6 damage!</li>
-      </ul>
+      <ul id="battleLog"></ul>
 
       <div class="bg-light border border-secondary rounded p-2 m-2">
         <h2 class="text-success">You</h2>
@@ -65,17 +59,17 @@
           <table>
             <tr>
               <td>
-                <button class="btn btn-success border border-dark">
+                <button class="btn btn-success border border-dark" onclick="attack(1)">
                   <img src="Bow Icon.png" width="50px" height="50px">
                 </button>
               </td>
               <td>
-                <button class="btn btn-success border border-dark">
+                <button class="btn btn-success border border-dark" onclick="attack(2)">
                   <img src="Sword Icon.png" width="50px" height="50px">
                 </button>
               </td>
               <td>
-                <button class="btn btn-success border border-dark">
+                <button class="btn btn-success border border-dark" onclick="attack(3)">
                   <img src="Spear Icon.png" width="50px" height="50px">
                 </button>
               </td>

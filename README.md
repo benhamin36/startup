@@ -67,3 +67,13 @@ For this deliverable I built out the structure of my application using HTML.
 - [x] - done - 20% Application elements. Buttons and tables are using bootstrap.
 - [x] - done - 10% Application text content. Text is displayed in several colors.
 - [x] - done - 10% Application images. I added curved edges around friend profile pictures.
+
+## JavaScript Deliverable
+
+- [x] - done - Prerequisite: Simon JavaScript deployed to your production environment
+- [x] - done - Prerequisite: A link to your GitHub startup repository prominently displayed on your application's home page
+- [x] - done - Prerequisite: Notes in your startup Git repository README.md file documenting what you modified and added with this deliverable.
+- [x] - done - 20% JavaScript support for future login. Login keeps track of input username for now.
+- [x] - done - 20% JavaScript support for future database data. Inventory is stored in local storage for now, but will be in database later.
+- [x] - done - 20% JavaScript support for future WebSocket. Uses setInterval function to simulate recieving battle responses from opponents.
+- [x] - done - 40% JavaScript support for your application's interaction logic. Able to choose a weapon and keep track of the user and opponent's HP as they battle. Will display appropriate weapon names based on what is equipped and handles a battle, displaying the weapons chosen and damage done. Picking a new friend to battle will update the battle page appropriately.
