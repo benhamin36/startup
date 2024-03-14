@@ -16,9 +16,39 @@ app.use(`/api`, apiRouter);
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
-    res.sendFile('index.html', { root: 'public' });
+  res.sendFile('index.html', { root: 'public' });
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
+
+// Send attack
+apiRouter.get('/attack', (_req, res) => {
+    choice = updateAttack();
+    res.send(choice);
   });
-  
-  app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-  });
+
+function updateAttack() {
+
+    //When we have a db, get the opponent's equipped items instead of the generic
+    //Also this will eventually become an api that only sends your response to the opponent and when it's received it updates. This is just a vague simulation for the moment.
+    const choice = Math.floor(Math.random() * 3); // this will be 0, 1, or 2, to simulate the opponent picking a weapon
+    let opponentItem = "Mighty Bow";
+    switch(choice) {
+        case 0:
+            opponentItem = "Mighty Bow";
+            break;
+        case 1:
+            opponentItem = "Mighty Sword";
+            break;
+        case 2:
+            opponentItem = "Mighty Spear";
+            break;
+        default:
+            opponentItem = "Mighty Bow";
+            break;
+    }
+
+    return opponentItem;
+}

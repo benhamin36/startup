@@ -86,28 +86,13 @@ function mapValuesToNames(value) {
     }
 }
 
-setInterval(() => {
+setInterval(async () => {
     if (localStorage.getItem("WaitingOnResponse") === "False" || localStorage.getItem("WaitingOnResponse") === "BattleOver") return;
 
     localStorage.setItem("WaitingOnResponse", "False");
 
-    const opponent = localStorage.getItem("Opponent");
-    const choice = Math.floor(Math.random() * 3); // this will be 0, 1, or 2, to simulate the opponent picking a weapon
-    let opponentItem = "Mighty Bow";
-    switch(choice) {
-        case 0:
-            opponentItem = "Mighty Bow";
-            break;
-        case 1:
-            opponentItem = "Mighty Sword";
-            break;
-        case 2:
-            opponentItem = "Mighty Spear";
-            break;
-        default:
-            opponentItem = "Mighty Bow";
-            break;
-    }
+    //Get the opponent's response
+    const opponentItem = await fetch('/api/attack');
 
     const battleLog = document.querySelector('#battleLog');
     var opponentChoice = document.createElement("li");
@@ -116,18 +101,22 @@ setInterval(() => {
 
     //Calculate damage
 
+    //Eventually we'll actually calculate the damage based on what is stored in the db. For now, we'll just make up numbers.
+    let yDam = 10;
+    let opDam = 12;
+
     var yourDamage = document.createElement("li");
-    yourDamage.textContent = `You take 10 damage!`;
+    yourDamage.textContent = `You take ${yDam} damage!`;
     battleLog.appendChild(yourDamage);
 
     var opponentDamage = document.createElement("li");
-    opponentDamage.textContent = `${opponent} takes 12 damage!`;
+    opponentDamage.textContent = `${opponent} takes ${opDam} damage!`;
     battleLog.appendChild(opponentDamage);
 
     let yourCurrentHP = localStorage.getItem("YourCurrentHP");
     let oppCurrentHP = localStorage.getItem("OpponentCurrentHP");
-    let yourNewHP = parseInt(yourCurrentHP) - 10;
-    let oppNewHP = parseInt(oppCurrentHP) - 12;
+    let yourNewHP = parseInt(yourCurrentHP) - yDam;
+    let oppNewHP = parseInt(oppCurrentHP) - opDam;
     localStorage.setItem("YourCurrentHP", yourNewHP);
     localStorage.setItem("OpponentCurrentHP", oppNewHP);
 
