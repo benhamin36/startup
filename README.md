@@ -77,3 +77,14 @@ For this deliverable I built out the structure of my application using HTML.
 - [x] - done - 20% JavaScript support for future database data. Inventory is stored in local storage for now, but will be in database later.
 - [x] - done - 20% JavaScript support for future WebSocket. Uses setInterval function to simulate recieving battle responses from opponents.
 - [x] - done - 40% JavaScript support for your application's interaction logic. Able to choose a weapon and keep track of the user and opponent's HP as they battle. Will display appropriate weapon names based on what is equipped and handles a battle, displaying the weapons chosen and damage done. Picking a new friend to battle will update the battle page appropriately.
+
+## Service Deliverable
+
+- [x] - done - Prerequisite: Simon Service deployed to your production environment
+- [x] - done - Prerequisite: A link to your GitHub startup repository prominently displayed on your application's home page
+- [x] - done - Prerequisite: Notes in your startup Git repository README.md file documenting what you modified and added with this deliverable.
+- [x] - done - 40% - Create an HTTP service using Node.js and Express
+- [x] - done - 10% - Frontend served up using Express static middleware
+- [x] - done - 10% - Your frontend calls third party service endpoints - Calls the quotes endpoint on login page.
+- [x] - done - 20% - Your backend provides service endpoints - There is an API call to simulate picking a weapon
+- [x] - done - 20% - Your frontend calls your service endpoints - The Battle page calls the attack endpoint to move the battles forward.
