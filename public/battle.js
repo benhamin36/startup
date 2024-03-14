@@ -89,10 +89,15 @@ function mapValuesToNames(value) {
 setInterval(async () => {
     if (localStorage.getItem("WaitingOnResponse") === "False" || localStorage.getItem("WaitingOnResponse") === "BattleOver") return;
 
-    localStorage.setItem("WaitingOnResponse", "False");
-
     //Get the opponent's response
-    const opponentItem = await fetch('/api/attack');
+    const response = await fetch('/api/attack');
+    const opponentItem = await response.text();
+
+    if (opponentItem === null || opponentItem.startsWith("<!DOCTYPE html>")) return;
+
+    let opponent = localStorage.getItem("Opponent");
+
+    localStorage.setItem("WaitingOnResponse", "False");
 
     const battleLog = document.querySelector('#battleLog');
     var opponentChoice = document.createElement("li");
