@@ -29,6 +29,7 @@ apiRouter.get('/attack', (_req, res) => {
   res.send(choice);
 });
 
+// Friends will be a post, so we can specify which user we want to get the list of friends for.
 apiRouter.post('/friends', (req, res) => {
   friends = friendList(req.body);
   res.send(friends);
@@ -60,6 +61,7 @@ function updateAttack() {
 
 let friends = [];
 function friendList(username) {
+
   //Eventually get this from the database
   friends = [];
   friends.push("Mr Knight");
