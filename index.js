@@ -61,7 +61,7 @@ function updateAttack() {
 let friends = [];
 function friendList(username) {
   //Eventually get this from the database
-
+  friends = [];
   friends.push("Mr Knight");
   friends.push("Mrs Knight");
   friends.push("NoLifr96");
