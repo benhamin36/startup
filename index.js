@@ -25,9 +25,14 @@ app.listen(port, () => {
 
 // Send attack
 apiRouter.get('/attack', (_req, res) => {
-    choice = updateAttack();
-    res.send(choice);
-  });
+  choice = updateAttack();
+  res.send(choice);
+});
+
+apiRouter.post('/friends', (req, res) => {
+  friends = friendList(req.body);
+  res.send(friends);
+});
 
 function updateAttack() {
 
@@ -51,4 +56,12 @@ function updateAttack() {
     }
 
     return opponentItem;
+}
+
+let friends = [];
+function friendList(username) {
+  //Eventually get this from the database
+
+  
+  return 
 }
