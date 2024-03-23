@@ -86,5 +86,5 @@ For this deliverable I built out the structure of my application using HTML.
 - [x] - done - 40% - Create an HTTP service using Node.js and Express
 - [x] - done - 10% - Frontend served up using Express static middleware
 - [x] - done - 10% - Your frontend calls third party service endpoints - Calls the quotes endpoint on login page.
-- [x] - done - 20% - Your backend provides service endpoints - There is an API call to simulate picking a weapon
-- [x] - done - 20% - Your frontend calls your service endpoints - The Battle page calls the attack endpoint to move the battles forward.
+- [x] - done - 20% - Your backend provides service endpoints - There is an API call to simulate picking a weapon. (Added on resubmission ->) There is another api call to provide a list of friends, given a username.
+- [x] - done - 20% - Your frontend calls your service endpoints - The Battle page calls the attack endpoint to move the battles forward. (Added on resubmission ->) The friends page populates itself based on the friends api call.
